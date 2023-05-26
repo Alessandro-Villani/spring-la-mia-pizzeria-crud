@@ -22,6 +22,9 @@
 				</div>
 			</div>
 		</div>
+		<div th:if="${pizzaList.isEmpty()}">
+			<h1>Non ci sono pizze</h1>
+		</div>
 	</main>
 </body>
 </html>
