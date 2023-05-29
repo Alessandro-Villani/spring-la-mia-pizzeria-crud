@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/5.2.3/css/bootstrap.min.css}"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<main class="container py-5">
+	<form class="d-flex flex-column align-items-center" method="POST">
+		<h1 class="mb-3">Crea Pizza</h1>
+		<label>Nome</label>
+		<input class="mb-3" type="text" name="name">
+		<label>Url immagine</label>
+		<input class="mb-3" type="text" name="imageUrl">
+		<label>Prezzo</label>
+		<input class="mb-3" type="number" step="0.01" name="price">
+		<label>Descrizione</label>
+		<textarea  class="mb-3" rows="5" cols="50" name="description"></textarea>
+		<button class="btn btn-success">Crea</button>
+	</form>
+	</main>
+
+</body>
+</html>
