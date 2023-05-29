@@ -32,5 +32,11 @@ public class PizzaService {
 		return pizzaRepo.findById(id);
 		
 	}
+	
+	public List<Pizza> findByNameContaining(String name){
+		
+		return pizzaRepo.findByNameContaining(name);
+		
+	}
 
 }

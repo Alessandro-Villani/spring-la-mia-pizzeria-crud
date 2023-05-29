@@ -6,7 +6,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Pizza</h1>
-	<p>[[ ${pizza.name} ]]</p>
+	<main class="container py-5">
+	<div class="row justify-content-center">
+				<div class="col-4 d-flex flex-column mb-3" th:object="${pizza}">
+					<div class="card h-100 d-flex flex-column p-5 text-center">
+						<h3 class="mb-3">[[ *{name} ]]</h3>
+						<img class="img-fluid mb-3" th:alt="*{name}" th:src="*{imageUrl}">
+						<h5 class="mb-3">Ingredienti</h5>
+						<p class="mb-5">[[ *{description} ]]</p>
+						<p class="mb-3">prezzo: [[ *{price} ]] E</p>
+					</div>
+				</div>
+			</div>
+	</main>
 </body>
 </html>
