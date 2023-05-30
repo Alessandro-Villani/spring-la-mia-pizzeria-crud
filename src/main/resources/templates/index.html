@@ -29,7 +29,7 @@
 							<form class="col-4" th:action="@{/pizzas/delete/{id} (id=*{id})}" method="post">
 								<button th:href class="btn btn-danger">Elimina</button>
 							</form>
-							<a class="col-4 btn btn-warning">Modifica</a>
+							<a th:href="@{/pizzas/edit/{id} (id=*{id})}" class="col-4 btn btn-warning">Modifica</a>
 						</div>
 					</div>
 				</div>
