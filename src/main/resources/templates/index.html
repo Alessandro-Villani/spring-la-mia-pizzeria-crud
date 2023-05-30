@@ -24,7 +24,13 @@
 						<h5 class="mb-3">Ingredienti</h5>
 						<p class="mb-5">[[ *{description} ]]</p>
 						<p class="mb-3">prezzo: [[ *{price} ]] E</p>
-						<a class="btn btn-primary" th:href="@{/pizzas/{id} (id=*{id})}">Dettagli</a>
+						<a class="btn btn-primary mb-3" th:href="@{/pizzas/{id} (id=*{id})}">Dettagli</a>
+						<div class="buttons row justify-content-center">
+							<form class="col-4" th:action="@{/pizzas/delete/{id} (id=*{id})}" method="post">
+								<button th:href class="btn btn-danger">Elimina</button>
+							</form>
+							<a class="col-4 btn btn-warning">Modifica</a>
+						</div>
 					</div>
 				</div>
 			</div>

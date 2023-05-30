@@ -61,11 +61,18 @@ public class PizzaController {
 	}
 	
 	@PostMapping("pizzas/create")
-	public String storeBook(@ModelAttribute Pizza pizza) {
+	public String storePizza(@ModelAttribute Pizza pizza) {
 		
 		pizzaService.save(pizza);
 		
 		return "redirect:/pizzas";
 	}
 	
+	@PostMapping("pizzas/delete/{id}")
+	public String deletePizza(@PathVariable("id") int id) {
+		
+		pizzaService.deleteById(id);
+		
+		return "redirect:/pizzas";
+	}
 }
